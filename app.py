@@ -48,14 +48,14 @@ def comprobar():
     if request.method == "POST":
         number = request.form.get("number")
         try:
-            int(number)
+            number = int(number)
         except:
             return redirect(url_for("home"))
         
         if not number:
             abort(400)
 
-        test = get("https://api.elpais.com/ws/LoteriaNavidadPremiados?n="+number)
+        test = get("https://api.elpais.com/ws/LoteriaNavidadPremiados?n="+str(number))
         answer_json = json.loads("{" + test.content.decode().split('{', 1)[1].split('}')[0] + "}")
         
         if answer_json["premio"] == 0:
