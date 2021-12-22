@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, abort
 from flask.helpers import url_for
 from werkzeug.utils import redirect
 from requests import get
-import re
 import json
 
 
