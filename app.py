@@ -53,7 +53,7 @@ def comprobar():
             return redirect(url_for("home"))
         
         if not number:
-            abort(400)
+            number = 0
 
         test = get("https://api.elpais.com/ws/LoteriaNavidadPremiados?n="+str(number))
         answer_json = json.loads("{" + test.content.decode().split('{', 1)[1].split('}')[0] + "}")
