@@ -30,15 +30,19 @@
       }
     }
   </style>
+
+  <script>
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/hit/loteria-navidad.herokuapp.com/visits");
+    xhr.send()
+  </script>
 </head>
 
 <body>
   <main>
     <h1 class="visually-hidden">Lotería Navidad</h1>
     <div class="px-4 py-5 my-5 text-center">
-      <img class="d-block mx-auto mb-4"
-        src="/static/Bola Bombo.png"
-        alt="" width="80" height="84">
+      <img class="d-block mx-auto mb-4" src="/static/Bola Bombo.png" alt="" width="80" height="84">
       <h1 class="display-5 fw-bold">Lotería Navidad</h1>
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">¡Comprueba tu boleto de la lotería de navidad ahora!</p>
@@ -59,18 +63,18 @@
         <p class="mt-5 fs-8"><em>ATENCIÓN:</em> Esta aplicación <em>no</em> es oficial, y puede contener errores. El
           desarrollador no se hace responsable de la exactitud de los datos mostrados</p>
 
-          <div>
-            <table class="table">
-              <tbody>
-                {% for premio in premios %}
-                <tr>
-                  <th scope="row">{{premio}}</th>
-                  <td>{{premios[premio]|join(', ') }}</td>
-                </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-          </div>
+        <div>
+          <table class="table">
+            <tbody>
+              {% for premio in premios %}
+              <tr>
+                <th scope="row">{{premio}}</th>
+                <td>{{premios[premio]|join(', ') }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
 
       </div>
 

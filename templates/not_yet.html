@@ -8,7 +8,7 @@
     <meta name="author" content="yagueto">
     <title>Lotería Navidad</title>
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-
+    
 
 
 
@@ -31,6 +31,12 @@
             }
         }
     </style>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.countapi.xyz/hit/loteria-navidad.herokuapp.com/visits");
+        xhr.send()
+      </script>
+    
 </head>
 
 <body>
