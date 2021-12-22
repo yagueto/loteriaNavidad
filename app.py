@@ -47,6 +47,11 @@ def home():
 def comprobar():
     if request.method == "POST":
         number = request.form.get("number")
+        try:
+            int(number)
+        except:
+            return redirect(url_for("home"))
+        
         if not number:
             abort(400)
 
