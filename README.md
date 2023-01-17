@@ -8,4 +8,6 @@ Pequeña web con backend en Python para comprobar si un boleto ha sido premiado 
 
 Basado en la API pública de El País (https://api.elpais.com/ws/LoteriaNavidadPremiados)
 
-Página web: https://loteria-navidad.herokuapp.com/
+Página web: https://loteria-navidad.herokuapp.com/ 
+> **Note**
+> Heroku ha dejado de dar servicio gratuito, por lo que he decidido dejar este proyecto. Es cierto que hay cosas que se pueden mejorar, pero tampoco tiene mucho recorrido más allá de esto. TL;DR: la página web ya no está disponible, ni lo estará probablemente
